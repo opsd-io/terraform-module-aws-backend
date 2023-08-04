@@ -25,13 +25,13 @@ output "dynamodb_table_arn" {
 
 
 output "state_access_policy_name" {
-  description = "The name of the state access policy, or null if create_managed_policy was false."
+  description = "The name of the state access policy."
   value       = aws_iam_policy.state_access.name
   sensitive   = false
 }
 
 output "state_access_policy_arn" {
-  description = "The ARN of the state access policy, or null if create_managed_policy was false."
+  description = "The ARN of the state access policy."
   value       = aws_iam_policy.state_access.arn
   sensitive   = false
 }
