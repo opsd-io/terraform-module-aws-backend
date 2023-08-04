@@ -8,6 +8,10 @@ terraform {
   }
 }
 
+data "aws_region" "current" {
+  # no arguments
+}
+
 resource "aws_iam_policy" "state_access" {
   name        = coalesce(var.iam_policy_name, "${var.bucket_name}-access")
   path        = var.iam_policy_path

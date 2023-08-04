@@ -1,3 +1,9 @@
+output "region" {
+  description = "The region of the state storage resources."
+  sensitive   = false
+  value       = data.aws_region.current.name
+}
+
 output "bucket_name" {
   description = "The name of the S3 Bucket to use for state storage."
   sensitive   = false
