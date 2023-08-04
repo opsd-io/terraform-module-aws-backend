@@ -9,7 +9,7 @@ terraform {
 }
 
 resource "aws_iam_policy" "state_access" {
-  name        = coalesce(var.iam_policy_name, "${aws_s3_bucket.state.bucket}-access")
+  name        = coalesce(var.iam_policy_name, "${var.bucket_name}-access")
   path        = var.iam_policy_path
   tags        = merge(var.common_tags, var.iam_policy_tags)
   description = "Provides access to Terraform state."

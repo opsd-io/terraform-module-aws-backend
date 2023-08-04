@@ -8,6 +8,16 @@ resource "aws_s3_bucket" "state" {
 resource "aws_s3_bucket_acl" "state" {
   bucket = aws_s3_bucket.state.id
   acl    = "private"
+  depends_on = [
+    aws_s3_bucket_ownership_controls.state,
+  ]
+}
+
+resource "aws_s3_bucket_ownership_controls" "state" {
+  bucket = aws_s3_bucket.state.id
+  rule {
+    object_ownership = "BucketOwnerPreferred"
+  }
 }
 
 resource "aws_s3_bucket_public_access_block" "state" {

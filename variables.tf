@@ -24,7 +24,7 @@ variable "bucket_tags" {
 variable "dynamodb_table_name" {
   description = "The name of DynamoDB Table to use for state locking and consistency."
   type        = string
-  default     = "terraform-state-locks"
+  default     = null
 }
 
 variable "dynamodb_table_tags" {

@@ -1,7 +1,7 @@
 ## DynamoDB Table for state locking.
 
 resource "aws_dynamodb_table" "state" {
-  name         = var.dynamodb_table_name
+  name         = coalesce(var.dynamodb_table_name, "${var.bucket_name}-locks")
   tags         = merge(var.common_tags, var.dynamodb_table_tags)
   billing_mode = "PAY_PER_REQUEST"
   hash_key     = "LockID"
