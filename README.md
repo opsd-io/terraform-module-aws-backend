@@ -70,14 +70,14 @@ No modules.
 
 ## Outputs
 
-| Name                                                                                                               | Description                                                          |
-| ------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------- |
-| <a name="output_bucket_arn"></a> [bucket\_arn](#output\_bucket\_arn)                                               | The ARN of the S3 Bucket.                                            |
-| <a name="output_bucket_name"></a> [bucket\_name](#output\_bucket\_name)                                            | The name of the S3 Bucket to use for state storage.                  |
-| <a name="output_dynamodb_table_arn"></a> [dynamodb\_table\_arn](#output\_dynamodb\_table\_arn)                     | The ARN of the DynamoDB Table.                                       |
-| <a name="output_dynamodb_table_name"></a> [dynamodb\_table\_name](#output\_dynamodb\_table\_name)                  | The name of DynamoDB Table to use for state locking and consistency. |
-| <a name="output_state_access_policy_arn"></a> [state\_access\_policy\_arn](#output\_state\_access\_policy\_arn)    | The ARN of the state access policy.                                  |
-| <a name="output_state_access_policy_name"></a> [state\_access\_policy\_name](#output\_state\_access\_policy\_name) | The name of the state access policy.                                 |
+| Name                                                                                                               | Description                                                           |
+| ------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------- |
+| <a name="output_bucket_arn"></a> [bucket\_arn](#output\_bucket\_arn)                                               | The ARN of the S3 Bucket.                                             |
+| <a name="output_bucket_name"></a> [bucket\_name](#output\_bucket\_name)                                            | The name of the S3 Bucket to use for state storage.                   |
+| <a name="output_dynamodb_table_arn"></a> [dynamodb\_table\_arn](#output\_dynamodb\_table\_arn)                     | The ARN of the DynamoDB Table.                                        |
+| <a name="output_dynamodb_table_name"></a> [dynamodb\_table\_name](#output\_dynamodb\_table\_name)                  | The name of DynamoDB Table to use for state locking and consistency.  |
+| <a name="output_state_access_policy_arn"></a> [state\_access\_policy\_arn](#output\_state\_access\_policy\_arn)    | The ARN of the state access policy providing Terraform state access.  |
+| <a name="output_state_access_policy_name"></a> [state\_access\_policy\_name](#output\_state\_access\_policy\_name) | The name of the state access policy providing Terraform state access. |
 <!-- END_TF_DOCS -->
 
 ## Examples of usage
