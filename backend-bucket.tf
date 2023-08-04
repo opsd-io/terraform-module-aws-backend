@@ -5,18 +5,10 @@ resource "aws_s3_bucket" "state" {
   tags   = merge(var.common_tags, var.bucket_tags)
 }
 
-resource "aws_s3_bucket_acl" "state" {
-  bucket = aws_s3_bucket.state.id
-  acl    = "private"
-  depends_on = [
-    aws_s3_bucket_ownership_controls.state,
-  ]
-}
-
 resource "aws_s3_bucket_ownership_controls" "state" {
   bucket = aws_s3_bucket.state.id
   rule {
-    object_ownership = "BucketOwnerPreferred"
+    object_ownership = "BucketOwnerEnforced" # ACLs disabled.
   }
 }
 
