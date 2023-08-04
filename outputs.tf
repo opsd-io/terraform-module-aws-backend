@@ -25,13 +25,13 @@ output "dynamodb_table_arn" {
 
 
 output "state_access_policy_name" {
-  description = "The name of the state access policy."
+  description = "The name of the state access policy providing Terraform state access."
   value       = aws_iam_policy.state_access.name
   sensitive   = false
 }
 
 output "state_access_policy_arn" {
-  description = "The ARN of the state access policy."
+  description = "The ARN of the state access policy providing Terraform state access."
   value       = aws_iam_policy.state_access.arn
   sensitive   = false
 }
