@@ -2,7 +2,7 @@
 
 resource "aws_dynamodb_table" "state" {
   name         = var.dynamodb_table_name
-  tags         = var.dynamodb_table_tags
+  tags         = merge(var.common_tags, var.dynamodb_table_tags)
   billing_mode = "PAY_PER_REQUEST"
   hash_key     = "LockID"
 

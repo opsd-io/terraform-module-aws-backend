@@ -2,7 +2,7 @@
 
 resource "aws_s3_bucket" "state" {
   bucket = var.bucket_name
-  tags   = var.bucket_tags
+  tags   = merge(var.common_tags, var.bucket_tags)
 }
 
 resource "aws_s3_bucket_acl" "state" {
