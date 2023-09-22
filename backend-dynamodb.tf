@@ -13,6 +13,7 @@ resource "aws_dynamodb_table" "state" {
 
 }
 
+## Access policy.
 
 data "aws_iam_policy_document" "dynamodb" {
   statement {
