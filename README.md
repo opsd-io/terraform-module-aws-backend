@@ -2,7 +2,7 @@
 
 Meet **OPSd**. The unique and effortless way of managing cloud infrastructure.
 
-# terraform-module-template
+# terraform-module-aws-backend
 
 ## Introduction
 
